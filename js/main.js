@@ -213,4 +213,97 @@ document.addEventListener('DOMContentLoaded', () => {
       if (messageInput.value.trim() !== '') messageError.textContent = '';
     });
   }
+
+  // --- 7. Certificate Lightbox Modal ---
+  const certModal = document.getElementById('cert-modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalTitle = document.getElementById('modal-title');
+  const modalClose = document.getElementById('modal-close');
+  const modalDownload = document.getElementById('modal-download');
+  const viewCertBtns = document.querySelectorAll('.view-cert-btn');
+
+  function openModal(certPath, certTitle) {
+    modalTitle.textContent = certTitle;
+    
+    // Check if certificate path is provided
+    if (certPath && certPath.trim() !== '') {
+      // Show image, hide placeholder if any, set download link
+      modalImg.src = certPath;
+      modalImg.style.display = 'block';
+      modalDownload.href = certPath;
+      modalDownload.style.display = 'inline-flex';
+      
+      // Remove any existing placeholder
+      const placeholder = certModal.querySelector('.cert-placeholder');
+      if (placeholder) placeholder.remove();
+    } else {
+      // Hide image and download button
+      modalImg.style.display = 'none';
+      modalDownload.style.display = 'none';
+      
+      // Remove existing placeholder to avoid duplicates
+      const existingPlaceholder = certModal.querySelector('.cert-placeholder');
+      if (existingPlaceholder) existingPlaceholder.remove();
+      
+      // Create and append placeholder content
+      const placeholder = document.createElement('div');
+      placeholder.className = 'cert-placeholder';
+      placeholder.innerHTML = `
+        <div class="cert-placeholder-icon">🛡️</div>
+        <div class="cert-placeholder-text">This certificate credential is pending upload or verification. It will be available shortly!</div>
+      `;
+      // Insert placeholder before modal action buttons
+      const wrapper = certModal.querySelector('.modal-image-wrapper');
+      wrapper.appendChild(placeholder);
+    }
+    
+    certModal.classList.add('active');
+    document.body.classList.add('modal-open');
+    certModal.setAttribute('aria-hidden', 'false');
+    
+    // Focus close button for accessibility
+    modalClose.focus();
+  }
+
+  function closeModal() {
+    certModal.classList.remove('active');
+    document.body.classList.remove('modal-open');
+    certModal.setAttribute('aria-hidden', 'true');
+    
+    // Reset image after animation to avoid flashing
+    setTimeout(() => {
+      modalImg.src = '';
+      const placeholder = certModal.querySelector('.cert-placeholder');
+      if (placeholder) placeholder.remove();
+    }, 400);
+  }
+
+  viewCertBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const certPath = btn.getAttribute('data-cert');
+      const certTitle = btn.getAttribute('data-title');
+      openModal(certPath, certTitle);
+    });
+  });
+
+  // Close triggers
+  if (modalClose) {
+    modalClose.addEventListener('click', closeModal);
+  }
+  
+  if (certModal) {
+    certModal.addEventListener('click', (e) => {
+      if (e.target === certModal) {
+        closeModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && certModal && certModal.classList.contains('active')) {
+      closeModal();
+    }
+  });
 });
+

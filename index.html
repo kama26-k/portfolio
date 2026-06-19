@@ -342,6 +342,9 @@
               <li>Used Nmap, Metasploit, and Wireshark for vulnerability assessment.</li>
               <li>Learned ethical hacking methodologies and basic incident response.</li>
             </ul>
+            <div style="margin-top: 20px;">
+              <a href="#" class="btn btn-sm btn-outline view-cert-btn" data-cert="assets/certificates/internship.jpg" data-title="Cybersecurity Intern — Zybeak Technologies">View Certificate</a>
+            </div>
           </div>
         </div>
 
@@ -357,6 +360,9 @@
               <li>Implemented backend functionality with XAMPP (Apache, PHP, MySQL).</li>
               <li>Gained experience in database management and server-side scripting.</li>
             </ul>
+            <div style="margin-top: 20px;">
+              <a href="#" class="btn btn-sm btn-outline view-cert-btn" data-cert="assets/certificates/inplant(1).jpg" data-title="Inplant Training — Codebind Technologies">View Certificate</a>
+            </div>
           </div>
         </div>
       </div>
@@ -411,7 +417,7 @@
           <h3>CC — Certified in Cybersecurity</h3>
           <p class="cert-issuer">ISC²</p>
           <p class="cert-date">Nov 2025</p>
-          <a href="#" class="btn btn-sm btn-outline">View Credential</a>
+          <a href="#" class="btn btn-sm btn-outline view-cert-btn" data-cert="assets/certificates/cc.png" data-title="CC — Certified in Cybersecurity (ISC²)">View Certificate</a>
         </div>
 
         <!-- Cert 2 -->
@@ -420,7 +426,7 @@
           <h3>CCNA — Introduction to Networks</h3>
           <p class="cert-issuer">Cisco</p>
           <p class="cert-date">Nov 2025</p>
-          <a href="#" class="btn btn-sm btn-outline">View Credential</a>
+          <a href="#" class="btn btn-sm btn-outline view-cert-btn" data-cert="assets/certificates/cisco.png" data-title="CCNA — Introduction to Networks (Cisco)">View Certificate</a>
         </div>
 
         <!-- Cert 3 -->
@@ -429,7 +435,7 @@
           <h3>AWS Academy — Cloud Foundations</h3>
           <p class="cert-issuer">Amazon Web Services</p>
           <p class="cert-date">May 2026</p>
-          <a href="#" class="btn btn-sm btn-outline">View Credential</a>
+          <a href="#" class="btn btn-sm btn-outline view-cert-btn" data-cert="assets/certificates/aws.png" data-title="AWS Academy — Cloud Foundations (AWS)">View Certificate</a>
         </div>
 
         <!-- Cert 4 -->
@@ -438,7 +444,7 @@
           <h3>Learn Ethical Hacking From Scratch</h3>
           <p class="cert-issuer">Udemy</p>
           <p class="cert-date">Jan 2025</p>
-          <a href="#" class="btn btn-sm btn-outline">View Credential</a>
+          <a href="#" class="btn btn-sm btn-outline view-cert-btn" data-cert="" data-title="Learn Ethical Hacking From Scratch (Udemy)">View Certificate</a>
         </div>
       </div>
     </div>
@@ -543,6 +549,24 @@
 
   <!-- Back to Top Button -->
   <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- Certificate Modal/Lightbox -->
+  <div id="cert-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">✕</button>
+      <div class="modal-content">
+        <h3 id="modal-title" class="modal-title">Certificate Title</h3>
+        <div class="modal-image-wrapper">
+          <img id="modal-img" src="" alt="Certificate Image" />
+        </div>
+        <div class="modal-actions">
+          <a id="modal-download" href="" download class="btn btn-primary btn-sm">
+            <span>📥</span> Download Certificate
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- JavaScript Files -->
   <script src="js/main.js"></script>
