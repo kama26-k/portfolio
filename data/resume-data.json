@@ -1,0 +1,138 @@
+{
+  "personal": {
+    "name": "Kamalesh S",
+    "phone": "+91 9444436536",
+    "email": "kamaleshsakthivel2006@gmail.com",
+    "github": "https://github.com/sakamalesh",
+    "linkedin": "https://www.linkedin.com/in/kamalesh3085732bS/",
+    "bio": "Aspiring cybersecurity professional with hands-on experience in penetration testing, vulnerability assessment, and cloud fundamentals.",
+    "education_college": "Saveetha Engineering College (2023–Present)"
+  },
+  "education": [
+    {
+      "degree": "B.E. Computer Science Engineering",
+      "institution": "Saveetha Engineering College, Sriperumbudur",
+      "period": "2023 – Present",
+      "gpa": "Ongoing"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Programming Languages",
+      "items": [
+        { "name": "Python", "pct": "85%" },
+        { "name": "Java", "pct": "75%" },
+        { "name": "C", "pct": "70%" },
+        { "name": "HTML/CSS/JS", "pct": "80%" }
+      ]
+    },
+    {
+      "category": "Networking",
+      "items": [
+        { "name": "CCNA", "pct": "90%" },
+        { "name": "TCP/IP", "pct": "85%" },
+        { "name": "Subnetting", "pct": "80%" }
+      ]
+    },
+    {
+      "category": "Cybersecurity",
+      "items": [
+        { "name": "Ethical Hacking", "pct": "85%" },
+        { "name": "Vulnerability Assessment", "pct": "80%" },
+        { "name": "Incident Response", "pct": "70%" }
+      ]
+    },
+    {
+      "category": "Tools",
+      "items": [
+        { "name": "Nmap", "pct": "85%" },
+        { "name": "Metasploit", "pct": "80%" },
+        { "name": "Wireshark", "pct": "80%" }
+      ]
+    },
+    {
+      "category": "Cloud",
+      "items": [
+        { "name": "AWS Cloud Foundations", "pct": "75%" }
+      ]
+    },
+    {
+      "category": "Machine Learning",
+      "items": [
+        { "name": "TensorFlow", "pct": "70%" },
+        { "name": "scikit-learn", "pct": "75%" },
+        { "name": "LSTM & Random Forest", "pct": "80%" }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Cybersecurity Intern",
+      "organization": "Zybeak Technologies",
+      "period": "30 Days",
+      "bullets": [
+        "Performed network security auditing and penetration testing.",
+        "Used Nmap, Metasploit, and Wireshark for vulnerability assessment.",
+        "Learned ethical hacking methodologies and basic incident response."
+      ]
+    },
+    {
+      "role": "Inplant Training — Web Development",
+      "organization": "Codebind Technologies",
+      "period": "15 Days | Jul 2024",
+      "bullets": [
+        "Built responsive web applications using HTML, CSS, JavaScript.",
+        "Implemented backend functionality with XAMPP (Apache, PHP, MySQL).",
+        "Gained experience in database management and server-side scripting."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Encryption Algorithm Classifier",
+      "tag": "ML + Security",
+      "description": "ML models (LSTM, Random Forest) that classify AES, DES, and RSA ciphertexts by detecting patterns unique to each algorithm.",
+      "tech": ["Python", "TensorFlow", "scikit-learn"],
+      "github": "https://github.com/sakamalesh/encryption-classifier",
+      "demo": "#"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "CC — Certified in Cybersecurity",
+      "issuer": "ISC²",
+      "date": "Nov 2025",
+      "icon": "🔐",
+      "link": "#"
+    },
+    {
+      "title": "CCNA — Introduction to Networks",
+      "issuer": "Cisco",
+      "date": "Nov 2025",
+      "icon": "🌐",
+      "link": "#"
+    },
+    {
+      "title": "AWS Academy — Cloud Foundations",
+      "issuer": "Amazon Web Services",
+      "date": "May 2026",
+      "icon": "☁️",
+      "link": "#"
+    },
+    {
+      "title": "Learn Ethical Hacking From Scratch 2024",
+      "issuer": "Udemy",
+      "date": "Jan 2025",
+      "icon": "🛡️",
+      "link": "#"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "IBM Z DATATHON 2025",
+      "description": "Led a team of 5 members. Developed communication, critical thinking, and decision-making skills under competitive conditions.",
+      "tag": "Leadership",
+      "icon": "🏆"
+    }
+  ]
+}

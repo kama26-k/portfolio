@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Configuration -->
+  <title>Kamalesh S | Cybersecurity & Cloud Portfolio</title>
+  <meta name="description" content="Aspiring cybersecurity professional with hands-on experience in penetration testing, ethical hacking, and AWS cloud." />
+  <meta name="keywords" content="cybersecurity, ethical hacking, CCNA, AWS, portfolio, internship, Saveetha Engineering College" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.com" />
+  <meta property="og:title" content="Kamalesh S | Cybersecurity & Cloud Portfolio" />
+  <meta property="og:description" content="Aspiring cybersecurity professional with hands-on experience in penetration testing, ethical hacking, and AWS cloud." />
+  <meta property="og:image" content="assets/images/profile.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://your-domain.com" />
+  <meta property="twitter:title" content="Kamalesh S | Cybersecurity & Cloud Portfolio" />
+  <meta property="twitter:description" content="Aspiring cybersecurity professional with hands-on experience in penetration testing, ethical hacking, and AWS cloud." />
+  <meta property="twitter:image" content="assets/images/profile.png" />
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-logo">KS</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button id="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home">
+    <canvas id="particle-canvas"></canvas>
+    <div class="container">
+      <div class="hero-content" data-reveal="scale">
+        <p class="hero-eyebrow">Hello, I'm</p>
+        <h1 class="hero-name">Kamalesh S</h1>
+        <p class="hero-title">
+          <span id="typed-text"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-bio">
+          Aspiring cybersecurity professional with hands-on experience in
+          penetration testing, vulnerability assessment, and cloud fundamentals.
+        </p>
+        <div class="hero-cta">
+          <a href="#" class="btn btn-primary" download="Kamalesh_Resume.pdf">Download Resume</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h2>About Me</h2>
+        <p class="section-subtitle">My education, core interests, and what drives me as a security professional.</p>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-text card-glass" data-reveal="left">
+          <h3>Who I Am</h3>
+          <p>
+            Entry-level cybersecurity professional pursuing B.E. Computer Science Engineering 
+            at Saveetha Engineering College (2023–present). Passionate about vulnerability 
+            assessment, threat analysis, and incident response.
+          </p>
+          <ul class="about-highlights">
+            <li>Currently Learning: Advanced Penetration Testing, AWS Security</li>
+            <li>Interests: Red Teaming, Network Defense, Cloud Security</li>
+            <li>Goal: Security Analyst / SOC Analyst role</li>
+          </ul>
+        </div>
+        
+        <div class="about-education" data-reveal="right">
+          <div class="card-glass edu-card" style="text-align: center; margin-bottom: 24px;">
+            <img src="assets/images/profile.png" alt="Kamalesh S" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-accent); margin-bottom: 16px;">
+            <h3>Kamalesh S</h3>
+            <p style="color: var(--color-accent); font-weight: 500;">Cybersecurity & Cloud Analyst</p>
+          </div>
+          <div class="card-glass edu-card">
+            <span class="edu-year">2023 – Present</span>
+            <h3>B.E. Computer Science Engineering</h3>
+            <p>Saveetha Engineering College, Sriperumbudur</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h2>My Skills</h2>
+        <p class="section-subtitle">Technical competencies and tools I work with to secure modern systems.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Programming Languages -->
+        <div class="card-glass skills-category-card" data-reveal="scale" data-reveal-delay="1">
+          <h3>Programming Languages</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Python</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Java</span>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">C</span>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">HTML/CSS/JS</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Networking -->
+        <div class="card-glass skills-category-card" data-reveal="scale" data-reveal-delay="2">
+          <h3>Networking</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">CCNA Syllabus</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">TCP/IP Protocol Suite</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Subnetting</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cybersecurity -->
+        <div class="card-glass skills-category-card" data-reveal="scale" data-reveal-delay="3">
+          <h3>Cybersecurity</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Ethical Hacking</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Vulnerability Assessment</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Incident Response</span>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="card-glass skills-category-card" data-reveal="scale" data-reveal-delay="4">
+          <h3>Tools</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Nmap</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Metasploit</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Wireshark</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cloud -->
+        <div class="card-glass skills-category-card" data-reveal="scale" data-reveal-delay="5">
+          <h3>Cloud</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">AWS Cloud Foundations</span>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="card-glass skills-category-card" data-reveal="scale" data-reveal-delay="6">
+          <h3>Machine Learning</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">TensorFlow</span>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">scikit-learn</span>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">LSTM & Random Forest</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--pct: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h2>Work Experience</h2>
+        <p class="section-subtitle">Practical experience gained through internships and technical training.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Experience 1 -->
+        <div class="timeline-item" data-reveal="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card-glass">
+            <span class="timeline-date">30 Days</span>
+            <h3>Cybersecurity Intern</h3>
+            <p class="timeline-org">Zybeak Technologies</p>
+            <ul>
+              <li>Performed network security auditing and penetration testing.</li>
+              <li>Used Nmap, Metasploit, and Wireshark for vulnerability assessment.</li>
+              <li>Learned ethical hacking methodologies and basic incident response.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item" data-reveal="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card-glass">
+            <span class="timeline-date">15 Days | Jul 2024</span>
+            <h3>Inplant Training — Web Development</h3>
+            <p class="timeline-org">Codebind Technologies</p>
+            <ul>
+              <li>Built responsive web applications using HTML, CSS, JavaScript.</li>
+              <li>Implemented backend functionality with XAMPP (Apache, PHP, MySQL).</li>
+              <li>Gained experience in database management and server-side scripting.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h2>Featured Projects</h2>
+        <p class="section-subtitle">Showcasing my research and engineering work combining ML and security.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="card-glass project-card" data-reveal="scale">
+          <div class="project-header">
+            <span class="project-tag">ML + Security</span>
+          </div>
+          <h3>Encryption Algorithm Classifier</h3>
+          <p>
+            ML models (LSTM, Random Forest) that classify AES, DES, and RSA ciphertexts 
+            by detecting patterns unique to each algorithm.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>TensorFlow</span>
+            <span>scikit-learn</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sakamalesh" target="_blank" class="btn btn-sm btn-primary">GitHub</a>
+            <a href="#" class="btn btn-sm btn-outline">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h2>Certifications</h2>
+        <p class="section-subtitle">Professional credentials verifying my core knowledge in security, cloud, and networking.</p>
+      </div>
+
+      <div class="certs-grid">
+        <!-- Cert 1 -->
+        <div class="card-glass cert-card" data-reveal="scale">
+          <div class="cert-icon">🔐</div>
+          <h3>CC — Certified in Cybersecurity</h3>
+          <p class="cert-issuer">ISC²</p>
+          <p class="cert-date">Nov 2025</p>
+          <a href="#" class="btn btn-sm btn-outline">View Credential</a>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="card-glass cert-card" data-reveal="scale" data-reveal-delay="1">
+          <div class="cert-icon">🌐</div>
+          <h3>CCNA — Introduction to Networks</h3>
+          <p class="cert-issuer">Cisco</p>
+          <p class="cert-date">Nov 2025</p>
+          <a href="#" class="btn btn-sm btn-outline">View Credential</a>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="card-glass cert-card" data-reveal="scale" data-reveal-delay="2">
+          <div class="cert-icon">☁️</div>
+          <h3>AWS Academy — Cloud Foundations</h3>
+          <p class="cert-issuer">Amazon Web Services</p>
+          <p class="cert-date">May 2026</p>
+          <a href="#" class="btn btn-sm btn-outline">View Credential</a>
+        </div>
+
+        <!-- Cert 4 -->
+        <div class="card-glass cert-card" data-reveal="scale" data-reveal-delay="3">
+          <div class="cert-icon">🛡️</div>
+          <h3>Learn Ethical Hacking From Scratch</h3>
+          <p class="cert-issuer">Udemy</p>
+          <p class="cert-date">Jan 2025</p>
+          <a href="#" class="btn btn-sm btn-outline">View Credential</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h2>Achievements</h2>
+        <p class="section-subtitle">Recognition and competitions where I have put my leadership and technical skills to the test.</p>
+      </div>
+
+      <div class="achievements-grid">
+        <!-- Achievement 1 -->
+        <div class="card-glass achievement-card" data-reveal="scale">
+          <div class="achievement-header">
+            <span class="achievement-icon">🏆</span>
+            <h3>IBM Z DATATHON 2025</h3>
+          </div>
+          <p>Led a team of 5 members. Developed communication, critical thinking, and decision-making skills under competitive conditions.</p>
+          <span class="achievement-tag">Leadership</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h2>Get In Touch</h2>
+        <p class="section-subtitle">Have an opportunity or want to connect? Drop a message below.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info Column -->
+        <div class="contact-info" data-reveal="left">
+          <h2>Let's talk cybersecurity.</h2>
+          <p>Open to internship and entry-level opportunities in cybersecurity, networking, and cloud systems auditing.</p>
+          
+          <ul class="contact-links">
+            <li>
+              <span>📧</span>
+              <a href="mailto:kamaleshsakthivel2006@gmail.com">kamaleshsakthivel2006@gmail.com</a>
+            </li>
+            <li>
+              <span>💼</span>
+              <a href="https://www.linkedin.com/in/kamalesh3085732bS/" target="_blank">linkedin.com/in/kamalesh3085732bS/</a>
+            </li>
+            <li>
+              <span>🐙</span>
+              <a href="https://github.com/sakamalesh" target="_blank">github.com/sakamalesh</a>
+            </li>
+            <li>
+              <span>📞</span>
+              <span>+91 94444 36536</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Form Column -->
+        <div class="card-glass" data-reveal="right">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
+              <span class="error-msg" id="name-error"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com" />
+              <span class="error-msg" id="email-error"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Internship Opportunity" />
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+              <span class="error-msg" id="message-error"></span>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p id="form-success" hidden>✅ Message sent! I'll get back to you soon.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Kamalesh S. All Rights Reserved. Built with HTML5, CSS3 & Vanilla JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- JavaScript Files -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/particles.js"></script>
+</body>
+</html>
