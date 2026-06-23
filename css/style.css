@@ -1059,6 +1059,9 @@ body.light-mode .contact-info-card .contact-links li {
 
 .contact-info-card .contact-links a {
   transition: var(--transition-fast);
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  min-width: 0;
 }
 
 .contact-info-card .contact-links a:hover {
@@ -1345,6 +1348,12 @@ body.light-mode .resume-modal-content {
   align-items: center;
   justify-content: center;
   gap: 6px;
+  min-width: 0;
+}
+
+.resume-contact-grid a {
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 .resume-contact-grid a:hover {
