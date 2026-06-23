@@ -170,78 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- 6. Form Validation ---
-  const form = document.getElementById('contact-form');
-  const nameInput = document.getElementById('name');
-  const emailInput = document.getElementById('email');
-  const messageInput = document.getElementById('message');
-  const nameError = document.getElementById('name-error');
-  const emailError = document.getElementById('email-error');
-  const messageError = document.getElementById('message-error');
-  const successMsg = document.getElementById('form-success');
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  function validateForm(e) {
-    e.preventDefault();
-    let isValid = true;
-
-    // Reset error messages and success
-    nameError.textContent = '';
-    emailError.textContent = '';
-    messageError.textContent = '';
-    successMsg.hidden = true;
-
-    // Name Validation
-    if (nameInput.value.trim() === '') {
-      nameError.textContent = 'Name is required.';
-      isValid = false;
-    }
-
-    // Email Validation
-    if (emailInput.value.trim() === '') {
-      emailError.textContent = 'Email is required.';
-      isValid = false;
-    } else if (!emailRegex.test(emailInput.value.trim())) {
-      emailError.textContent = 'Please enter a valid email address.';
-      isValid = false;
-    }
-
-    // Message Validation
-    if (messageInput.value.trim() === '') {
-      messageError.textContent = 'Message is required.';
-      isValid = false;
-    }
-
-    if (isValid) {
-      // Simulate form submission
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
-
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-        successMsg.hidden = false;
-        form.reset();
-      }, 1500);
-    }
-  }
-
-  if (form) {
-    form.addEventListener('submit', validateForm);
-
-    // Optional: Real-time validation clear on input
-    nameInput.addEventListener('input', () => {
-      if (nameInput.value.trim() !== '') nameError.textContent = '';
-    });
-    emailInput.addEventListener('input', () => {
-      if (emailRegex.test(emailInput.value.trim())) emailError.textContent = '';
-    });
-    messageInput.addEventListener('input', () => {
-      if (messageInput.value.trim() !== '') messageError.textContent = '';
-    });
-  }
+  // Form removed; no validation required.
 
   // --- 7. Certificate Lightbox Modal ---
   const certModal = document.getElementById('cert-modal');
