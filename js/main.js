@@ -287,5 +287,61 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal();
     }
   });
+
+  // --- 8. Resume Viewer Modal ---
+  const resumeModal = document.getElementById('resume-modal');
+  const resumeModalClose = document.getElementById('resume-modal-close');
+  const resumePrintBtn = document.getElementById('resume-print');
+  const viewResumeBtns = document.querySelectorAll('.view-resume-btn');
+
+  function openResumeModal() {
+    if (resumeModal) {
+      resumeModal.classList.add('active');
+      document.body.classList.add('modal-open');
+      resumeModal.setAttribute('aria-hidden', 'false');
+      if (resumeModalClose) resumeModalClose.focus();
+    }
+  }
+
+  function closeResumeModal() {
+    if (resumeModal) {
+      resumeModal.classList.remove('active');
+      document.body.classList.remove('modal-open');
+      resumeModal.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  viewResumeBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openResumeModal();
+    });
+  });
+
+  if (resumeModalClose) {
+    resumeModalClose.addEventListener('click', closeResumeModal);
+  }
+
+  if (resumeModal) {
+    resumeModal.addEventListener('click', (e) => {
+      if (e.target === resumeModal) {
+        closeResumeModal();
+      }
+    });
+  }
+
+  if (resumePrintBtn) {
+    resumePrintBtn.addEventListener('click', () => {
+      window.print();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (resumeModal && resumeModal.classList.contains('active')) {
+        closeResumeModal();
+      }
+    }
+  });
 });
 

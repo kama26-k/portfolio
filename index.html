@@ -63,7 +63,7 @@
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#achievements">Achievements</a></li>
       <li><a href="https://github.com/sakamalesh" target="_blank" class="nav-external">GitHub <span class="ext-icon">↗</span></a></li>
-      <li><a href="assets/Kamalesh_Resume.pdf" download class="btn btn-sm btn-outline nav-resume-btn">Resume</a></li>
+      <li><a href="#" class="btn btn-sm btn-outline nav-resume-btn view-resume-btn">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="sidebar-footer">
@@ -87,7 +87,7 @@
             penetration testing, vulnerability assessment, and cloud fundamentals.
           </p>
           <div class="hero-cta">
-            <a href="#" class="btn btn-primary" download="Kamalesh_Resume.pdf">Download Resume</a>
+            <a href="#" class="btn btn-primary view-resume-btn">Download Resume</a>
             <a href="#contact" class="btn btn-outline">Get in Touch</a>
           </div>
         </div>
@@ -552,6 +552,166 @@
           <a id="modal-download" href="" download class="btn btn-primary btn-sm">
             <span>📥</span> Download Certificate
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume Modal -->
+  <div id="resume-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="resume-modal-title">
+    <div class="modal-container resume-modal-container">
+      <button class="modal-close-btn" id="resume-modal-close" aria-label="Close modal">✕</button>
+      
+      <!-- Top Action Bar -->
+      <div class="resume-actions-bar">
+        <a href="assets/Kamalesh_Resume.pdf" download class="btn btn-primary btn-sm">
+          <span>📥</span> Download PDF
+        </a>
+        <button id="resume-print" class="btn btn-outline btn-sm">
+          <span>🖨️</span> Print Resume
+        </button>
+      </div>
+
+      <div class="modal-content resume-modal-content">
+        <!-- Resume Header -->
+        <header class="resume-header">
+          <h1 id="resume-modal-title">Kamalesh S</h1>
+          <p class="resume-tagline">Cybersecurity & Cloud Analyst</p>
+          <div class="resume-contact-grid">
+            <span>📧 <a href="mailto:kamaleshsakthivel2006@gmail.com">kamaleshsakthivel2006@gmail.com</a></span>
+            <span>📞 +91 94444 36536</span>
+            <span>💼 <a href="https://linkedin.com/in/kamalesh3085732bS/" target="_blank">LinkedIn</a></span>
+            <span>🐙 <a href="https://github.com/sakamalesh" target="_blank">GitHub</a></span>
+          </div>
+        </header>
+
+        <!-- Resume Body (Two Columns) -->
+        <div class="resume-body-grid">
+          <!-- Left Column -->
+          <div class="resume-col-left">
+            <!-- Education -->
+            <section class="resume-modal-section">
+              <h2 class="resume-sec-title">Education</h2>
+              <div class="resume-item">
+                <div class="resume-item-header">
+                  <h3>B.E. Computer Science Engineering</h3>
+                  <span class="resume-item-date">2023 – Present</span>
+                </div>
+                <p class="resume-item-org">Saveetha Engineering College, Sriperumbudur</p>
+                <p class="resume-item-sub">Grade: Ongoing (Active Learner)</p>
+              </div>
+            </section>
+
+            <!-- Experience -->
+            <section class="resume-modal-section">
+              <h2 class="resume-sec-title">Work Experience</h2>
+              <div class="resume-item">
+                <div class="resume-item-header">
+                  <h3>Cybersecurity Intern</h3>
+                  <span class="resume-item-date">30 Days</span>
+                </div>
+                <p class="resume-item-org">Zybeak Technologies</p>
+                <ul class="resume-item-list">
+                  <li>Performed network security auditing and penetration testing.</li>
+                  <li>Used Nmap, Metasploit, and Wireshark for vulnerability assessment.</li>
+                  <li>Learned ethical hacking methodologies and basic incident response.</li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <div class="resume-item-header">
+                  <h3>Inplant Training — Web Development</h3>
+                  <span class="resume-item-date">15 Days | Jul 2024</span>
+                </div>
+                <p class="resume-item-org">Codebind Technologies</p>
+                <ul class="resume-item-list">
+                  <li>Built responsive web applications using HTML, CSS, and JavaScript.</li>
+                  <li>Implemented backend functionality with XAMPP (Apache, PHP, MySQL).</li>
+                  <li>Gained experience in database management and server-side scripting.</li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- Projects -->
+            <section class="resume-modal-section">
+              <h2 class="resume-sec-title">Featured Project</h2>
+              <div class="resume-item">
+                <div class="resume-item-header">
+                  <h3>Encryption Algorithm Classifier</h3>
+                  <span class="resume-item-date">ML + Security</span>
+                </div>
+                <p class="resume-item-desc">Developed machine learning models (LSTM, Random Forest) that classify AES, DES, and RSA ciphertexts by detecting patterns unique to each algorithm.</p>
+              </div>
+            </section>
+          </div>
+
+          <!-- Right Column -->
+          <div class="resume-col-right">
+            <!-- Skills -->
+            <section class="resume-modal-section">
+              <h2 class="resume-sec-title">Skills Overview</h2>
+              
+              <div class="resume-skill-cat">
+                <h3>Programming</h3>
+                <div class="resume-pills">
+                  <span>Python</span><span>Java</span><span>C</span><span>HTML/CSS/JS</span>
+                </div>
+              </div>
+
+              <div class="resume-skill-cat">
+                <h3>Networking</h3>
+                <div class="resume-pills">
+                  <span>CCNA Syllabus</span><span>TCP/IP</span><span>Subnetting</span>
+                </div>
+              </div>
+
+              <div class="resume-skill-cat">
+                <h3>Cybersecurity</h3>
+                <div class="resume-pills">
+                  <span>Ethical Hacking</span><span>Vulnerability Assessment</span><span>Nmap</span><span>Metasploit</span><span>Wireshark</span>
+                </div>
+              </div>
+
+              <div class="resume-skill-cat">
+                <h3>Cloud & ML</h3>
+                <div class="resume-pills">
+                  <span>AWS Academy</span><span>TensorFlow</span><span>scikit-learn</span>
+                </div>
+              </div>
+            </section>
+
+            <!-- Certifications -->
+            <section class="resume-modal-section">
+              <h2 class="resume-sec-title">Certifications</h2>
+              <ul class="resume-certs-list">
+                <li>
+                  <strong>ISC² CC</strong>
+                  <span>Certified in Cybersecurity</span>
+                </li>
+                <li>
+                  <strong>Cisco CCNA</strong>
+                  <span>Introduction to Networks</span>
+                </li>
+                <li>
+                  <strong>AWS Academy</strong>
+                  <span>Cloud Foundations</span>
+                </li>
+                <li>
+                  <strong>Udemy</strong>
+                  <span>Learn Ethical Hacking from Scratch</span>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Achievements -->
+            <section class="resume-modal-section">
+              <h2 class="resume-sec-title">Achievements</h2>
+              <div class="resume-item">
+                <h3>IBM Z Datathon 2025</h3>
+                <p class="resume-item-desc">Led a team of 5 members. Developed communication, critical thinking, and domain decision-making skills.</p>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </div>

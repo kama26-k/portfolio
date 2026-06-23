@@ -1276,3 +1276,326 @@ body.light-mode .modal-image-wrapper {
   100% { transform: scale(1); opacity: 0.7; }
 }
 
+/* ==========================================================================
+   11. Resume Viewer Modal Custom Styles
+   ========================================================================== */
+
+.resume-modal-container {
+  max-width: 850px;
+  width: 95%;
+  padding: 24px;
+}
+
+.resume-actions-bar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.resume-modal-content {
+  text-align: left;
+  align-items: stretch;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+body.light-mode .resume-modal-content {
+  background: rgba(0, 0, 0, 0.01);
+}
+
+/* Resume Header */
+.resume-header {
+  text-align: center;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 16px;
+}
+
+.resume-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 4px;
+  background: linear-gradient(135deg, var(--text-primary) 30%, var(--text-muted));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.resume-tagline {
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: 12px;
+  font-family: var(--font-display);
+}
+
+.resume-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px 16px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.resume-contact-grid span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.resume-contact-grid a:hover {
+  color: var(--color-accent);
+}
+
+/* Resume Grid Layout */
+.resume-body-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+}
+
+/* Section design */
+.resume-modal-section {
+  margin-bottom: 20px;
+}
+
+.resume-sec-title {
+  font-size: 1.2rem;
+  font-family: var(--font-display);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+/* Resume Item styling */
+.resume-item {
+  margin-bottom: 16px;
+}
+
+.resume-item:last-child {
+  margin-bottom: 0;
+}
+
+.resume-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.resume-item-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.resume-item-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.resume-item-org {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.resume-item-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.resume-item-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.resume-item-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resume-item-list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.resume-item-list li::before {
+  content: '▪';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+/* Skills section in resume */
+.resume-skill-cat {
+  margin-bottom: 12px;
+}
+
+.resume-skill-cat h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.resume-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.resume-pills span {
+  font-size: 0.75rem;
+  background: rgba(6, 182, 212, 0.08);
+  color: var(--color-accent);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Certs list in resume */
+.resume-certs-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resume-certs-list li {
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-certs-list li strong {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.resume-certs-list li span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Overrides for Resume Modal */
+@media (max-width: 767px) {
+  .resume-body-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .resume-contact-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .resume-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
+
+/* Print Stylesheet Overrides */
+@media print {
+  body > :not(#resume-modal) {
+    display: none !important;
+  }
+  
+  #resume-modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background: #ffffff !important;
+    color: #000000 !important;
+    display: block !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .resume-modal-container {
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .modal-close-btn,
+  .resume-actions-bar {
+    display: none !important;
+  }
+
+  .resume-modal-content {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    padding: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Text color corrections for high-contrast print */
+  .resume-header h1 {
+    color: #000000 !important;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+  }
+  .resume-tagline {
+    color: #333333 !important;
+  }
+  .resume-contact-grid {
+    color: #333333 !important;
+  }
+  .resume-contact-grid a {
+    color: #000000 !important;
+  }
+  .resume-sec-title {
+    color: #000000 !important;
+    border-bottom: 2px solid #000000 !important;
+  }
+  .resume-item-header h3 {
+    color: #000000 !important;
+  }
+  .resume-item-org {
+    color: #111111 !important;
+  }
+  .resume-item-date {
+    color: #333333 !important;
+  }
+  .resume-item-desc,
+  .resume-item-list li,
+  .resume-certs-list li span {
+    color: #333333 !important;
+  }
+  .resume-pills span {
+    background: #e2e8f0 !important;
+    color: #000000 !important;
+    border: 1px solid #cbd5e1 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .resume-body-grid {
+    display: grid !important;
+    grid-template-columns: 1.2fr 0.8fr !important;
+    gap: 24px !important;
+  }
+}
+
