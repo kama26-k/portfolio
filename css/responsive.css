@@ -2,46 +2,23 @@
 
 /* Mobile / Tablet Transitions (< 768px) */
 @media (max-width: 767px) {
+  .nav-controls {
+    top: 20px;
+    right: 20px;
+    gap: 12px;
+  }
+
+  #hamburger,
+  #theme-toggle {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
   #navbar {
-    top: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 24px);
-    padding: 0 16px;
-    border-radius: 12px;
-  }
-
-  #hamburger {
-    display: flex;
-    z-index: 1001;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 320px;
-    height: 100vh;
-    background: rgba(15, 23, 42, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-left: 1px solid var(--border);
-    flex-direction: column;
-    padding: 80px 32px 40px 32px;
-    gap: 16px;
-    transition: var(--transition-normal);
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    overflow-y: auto;
-  }
-
-  .nav-links.open {
-    right: 0;
-  }
-
-  body.light-mode .nav-links {
-    background: rgba(248, 250, 252, 0.85);
+    width: 280px;
+    right: -280px;
+    padding: 30px 24px;
   }
 
   .hero-glass-card {

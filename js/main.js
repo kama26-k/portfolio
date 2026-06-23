@@ -80,31 +80,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(section => navObserver.observe(section));
 
-  // --- 3. Hamburger Menu with Scroll Lock ---
+  // --- 3. Sidebar Drawer Navigation ---
   const hamburger = document.getElementById('hamburger');
-  const navLinksContainer = document.querySelector('.nav-links');
+  const sidebarClose = document.getElementById('sidebar-close');
+  const navOverlay = document.getElementById('nav-overlay');
+  const sidebarNavbar = document.getElementById('navbar');
 
-  function toggleMenu() {
-    const isOpen = navLinksContainer.classList.contains('open');
-    if (isOpen) {
-      navLinksContainer.classList.remove('open');
-      document.body.classList.remove('nav-open');
-      hamburger.innerHTML = '☰';
-    } else {
-      navLinksContainer.classList.add('open');
-      document.body.classList.add('nav-open');
+  function openSidebar() {
+    sidebarNavbar.classList.add('open');
+    navOverlay.classList.add('active');
+    document.body.classList.add('nav-open');
+    if (hamburger) {
       hamburger.innerHTML = '✕';
+      hamburger.setAttribute('aria-expanded', 'true');
     }
   }
 
-  hamburger.addEventListener('click', toggleMenu);
+  function closeSidebar() {
+    sidebarNavbar.classList.remove('open');
+    navOverlay.classList.remove('active');
+    document.body.classList.remove('nav-open');
+    if (hamburger) {
+      hamburger.innerHTML = '☰';
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+  }
 
-  // Close menu when a link is clicked
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = sidebarNavbar.classList.contains('open');
+      if (isOpen) {
+        closeSidebar();
+      } else {
+        openSidebar();
+      }
+    });
+  }
+
+  if (sidebarClose) {
+    sidebarClose.addEventListener('click', closeSidebar);
+  }
+
+  if (navOverlay) {
+    navOverlay.addEventListener('click', closeSidebar);
+  }
+
+  // Close sidebar drawer when links are clicked
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      if (navLinksContainer.classList.contains('open')) {
-        toggleMenu();
-      }
+      closeSidebar();
     });
   });
 
