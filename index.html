@@ -34,6 +34,11 @@
 </head>
 <body>
 
+  <!-- Ambient Background Glows -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+
   <!-- Navigation Bar -->
   <nav id="navbar" aria-label="Main navigation">
     <div class="nav-logo">KS</div>
@@ -56,19 +61,21 @@
   <section id="home">
     <canvas id="particle-canvas"></canvas>
     <div class="container">
-      <div class="hero-content" data-reveal="scale">
-        <p class="hero-eyebrow">Hello, I'm</p>
-        <h1 class="hero-name">Kamalesh S</h1>
-        <p class="hero-title">
-          <span id="typed-text"></span><span class="cursor">|</span>
-        </p>
-        <p class="hero-bio">
-          Aspiring cybersecurity professional with hands-on experience in
-          penetration testing, vulnerability assessment, and cloud fundamentals.
-        </p>
-        <div class="hero-cta">
-          <a href="#" class="btn btn-primary" download="Kamalesh_Resume.pdf">Download Resume</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      <div class="hero-glass-card card-glass" data-reveal="scale">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Hello, I'm</p>
+          <h1 class="hero-name">Kamalesh S</h1>
+          <p class="hero-title">
+            <span id="typed-text"></span><span class="cursor">|</span>
+          </p>
+          <p class="hero-bio">
+            Aspiring cybersecurity professional with hands-on experience in
+            penetration testing, vulnerability assessment, and cloud fundamentals.
+          </p>
+          <div class="hero-cta">
+            <a href="#" class="btn btn-primary" download="Kamalesh_Resume.pdf">Download Resume</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
         </div>
       </div>
     </div>

@@ -1,4 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // --- Ambient Cursor Glow Tracking ---
+  const cursorGlow = document.createElement('div');
+  cursorGlow.className = 'cursor-glow';
+  document.body.appendChild(cursorGlow);
+
+  let activeTimeout;
+  document.addEventListener('mousemove', (e) => {
+    // Center the radial glow on cursor coordinates
+    cursorGlow.style.left = `${e.clientX}px`;
+    cursorGlow.style.top = `${e.clientY}px`;
+    
+    if (!cursorGlow.classList.contains('active')) {
+      cursorGlow.classList.add('active');
+    }
+
+    clearTimeout(activeTimeout);
+    activeTimeout = setTimeout(() => {
+      cursorGlow.classList.remove('active');
+    }, 1000);
+  });
+
+  document.addEventListener('mouseenter', () => {
+    cursorGlow.classList.add('active');
+  });
+
+  document.addEventListener('mouseleave', () => {
+    cursorGlow.classList.remove('active');
+  });
+
   // --- 1. Sticky Navbar & Back-to-Top Button ---
   const navbar = document.getElementById('navbar');
   const backToTopBtn = document.getElementById('back-to-top');

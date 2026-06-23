@@ -2,20 +2,20 @@
 
 :root {
   /* Color Palette - Dark Mode (Default) */
-  --bg-primary: #0B1120;
-  --bg-secondary: #0f172a;
-  --bg-card: rgba(17, 24, 39, 0.7);
-  --bg-card-hover: rgba(30, 41, 59, 0.8);
+  --bg-primary: #070D1A; /* Deeper dark for higher contrast with ambient glows */
+  --bg-secondary: #0c1328;
+  --bg-card: rgba(15, 23, 42, 0.35); /* Transparent, glassy dark card base */
+  --bg-card-hover: rgba(15, 23, 42, 0.55);
   --color-primary: #3b82f6; /* Modern Blue */
   --color-secondary: #6366f1; /* Indigo */
   --color-accent: #06b6d4; /* Cyan */
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
   --text-muted: #94a3b8;
-  --border: rgba(37, 99, 235, 0.2);
-  --border-hover: rgba(6, 182, 212, 0.4);
-  --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  --shadow-hover: 0 20px 40px -15px rgba(6, 182, 212, 0.25);
+  --border: rgba(255, 255, 255, 0.08); /* Clean, transparent border for highlights */
+  --border-hover: rgba(6, 182, 212, 0.35);
+  --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --shadow-hover: 0 12px 40px 0 rgba(6, 182, 212, 0.15), 0 8px 32px 0 rgba(0, 0, 0, 0.45);
   
   /* Fonts */
   --font-display: 'Space Grotesk', sans-serif;
@@ -31,20 +31,20 @@
 
 /* Light Mode Overrides */
 body.light-mode {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
-  --bg-card: rgba(255, 255, 255, 0.8);
-  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --bg-primary: #f1f5f9;
+  --bg-secondary: #e2e8f0;
+  --bg-card: rgba(255, 255, 255, 0.45); /* Soft light glass */
+  --bg-card-hover: rgba(255, 255, 255, 0.65);
   --color-primary: #2563eb;
   --color-secondary: #4f46e5;
   --color-accent: #0891b2;
   --text-primary: #0f172a;
   --text-secondary: #334155;
   --text-muted: #64748b;
-  --border: rgba(37, 99, 235, 0.15);
-  --border-hover: rgba(8, 145, 178, 0.4);
-  --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
-  --shadow-hover: 0 20px 40px -15px rgba(37, 99, 235, 0.15);
+  --border: rgba(0, 0, 0, 0.06); /* Soft dark border for legibility */
+  --border-hover: rgba(8, 145, 178, 0.3);
+  --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+  --shadow-hover: 0 12px 40px 0 rgba(37, 99, 235, 0.12), 0 8px 32px 0 rgba(0, 0, 0, 0.06);
 }
 
 /* Global Reset */
@@ -56,7 +56,7 @@ body.light-mode {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--header-height);
+  scroll-padding-top: 100px; /* Floating navbar spacing */
 }
 
 body {
@@ -65,7 +65,95 @@ body {
   color: var(--text-secondary);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ambient Background Glows */
+.bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
+  transition: opacity 0.5s ease;
+}
+
+body.light-mode .bg-glow {
+  opacity: 0.35;
+}
+
+.bg-glow-1 {
+  top: 5%;
+  left: -15%;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.28) 0%, rgba(37, 99, 235, 0.05) 50%, transparent 70%);
+}
+
+.bg-glow-2 {
+  top: 45%;
+  right: -15%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, rgba(99, 102, 241, 0.04) 55%, transparent 70%);
+}
+
+.bg-glow-3 {
+  bottom: 2%;
+  left: 5%;
+  width: 750px;
+  height: 750px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.28) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 70%);
+}
+
+body.light-mode .bg-glow-1 {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+}
+body.light-mode .bg-glow-2 {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+}
+body.light-mode .bg-glow-3 {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+}
+
+/* Custom Cyber Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.3) 0%, rgba(6, 182, 212, 0.3) 100%);
+  border-radius: 5px;
+  border: 2px solid var(--bg-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.6) 0%, rgba(6, 182, 212, 0.6) 100%);
+}
+
+/* Mouse-tracking Ambient cursor glow */
+.cursor-glow {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1s ease, left 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94), top 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+body.light-mode .cursor-glow {
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+}
+
+.cursor-glow.active {
+  opacity: 1;
 }
 
 /* Selection */
@@ -183,10 +271,10 @@ section {
 /* Glassmorphism Cards */
 .card-glass {
   background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 28px;
   box-shadow: var(--shadow);
   transition: var(--transition-normal);
@@ -201,30 +289,42 @@ section {
 /* 1. Navigation Bar */
 #navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--header-height);
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: var(--max-width);
+  height: 64px;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0 32px;
   transition: var(--transition-normal);
-  border-bottom: 1px solid transparent;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 #navbar.scrolled {
-  height: 70px;
-  background: rgba(11, 17, 32, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  top: 10px;
+  height: 56px;
+  background: rgba(8, 13, 26, 0.65);
+  border-color: var(--border-hover);
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.15), 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode #navbar {
+  background: rgba(255, 255, 255, 0.45);
+  border-color: rgba(0, 0, 0, 0.05);
 }
 
 body.light-mode #navbar.scrolled {
-  background: rgba(248, 250, 252, 0.85);
+  background: rgba(248, 250, 252, 0.65);
+  border-color: var(--border-hover);
 }
 
 .nav-logo {
@@ -335,11 +435,26 @@ body.light-mode #navbar.scrolled {
   pointer-events: none;
 }
 
+.hero-glass-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  padding: 56px 48px;
+  border-radius: 24px !important;
+  margin: 100px auto 0 auto;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 1px 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+body.light-mode .hero-glass-card {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05), 0 0 1px 1px rgba(255, 255, 255, 0.6) inset;
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
-  margin-top: 40px;
+  margin-top: 0;
 }
 
 .hero-eyebrow {
@@ -852,7 +967,7 @@ body.light-mode #navbar.scrolled {
 .form-group textarea {
   width: 100%;
   padding: 12px 16px;
-  background: var(--bg-secondary);
+  background: rgba(15, 23, 42, 0.2);
   border: 1px solid var(--border);
   border-radius: 8px;
   color: var(--text-primary);
@@ -860,12 +975,25 @@ body.light-mode #navbar.scrolled {
   font-size: 0.95rem;
   transition: var(--transition-fast);
   outline: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group textarea {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.25);
+  background: rgba(15, 23, 42, 0.35);
+}
+
+body.light-mode .form-group input:focus,
+body.light-mode .form-group textarea:focus {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .error-msg {

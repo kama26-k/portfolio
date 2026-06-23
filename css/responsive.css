@@ -3,7 +3,12 @@
 /* Mobile / Tablet Transitions (< 768px) */
 @media (max-width: 767px) {
   #navbar {
-    padding: 0 20px;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 24px);
+    padding: 0 16px;
+    border-radius: 12px;
   }
 
   #hamburger {
@@ -18,7 +23,9 @@
     width: 80%;
     max-width: 320px;
     height: 100vh;
-    background: var(--bg-secondary);
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-left: 1px solid var(--border);
     flex-direction: column;
     padding: 100px 40px;
@@ -33,7 +40,12 @@
   }
 
   body.light-mode .nav-links {
-    background: var(--bg-secondary);
+    background: rgba(248, 250, 252, 0.85);
+  }
+
+  .hero-glass-card {
+    padding: 32px 20px !important;
+    margin-top: 80px !important;
   }
 
   .hero-name {
