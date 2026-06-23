@@ -340,15 +340,17 @@ body.light-mode #navbar.scrolled {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 32px;
+  gap: 16px; /* Reduced gap to accommodate all 11 items */
+  align-items: center;
 }
 
 .nav-links a {
-  font-size: 0.95rem;
+  font-size: 0.88rem; /* Slightly smaller for premium floating look */
   font-weight: 500;
   color: var(--text-secondary);
   position: relative;
-  padding: 8px 0;
+  padding: 6px 0;
+  white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -370,6 +372,34 @@ body.light-mode #navbar.scrolled {
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
+}
+
+.nav-external {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ext-icon {
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+/* Glass Resume Button inside navbar */
+.nav-resume-btn {
+  padding: 6px 14px !important;
+  font-size: 0.8rem !important;
+  border-radius: 8px !important;
+  background: rgba(6, 182, 212, 0.1) !important;
+  border-color: rgba(6, 182, 212, 0.25) !important;
+  color: var(--color-accent) !important;
+}
+
+.nav-resume-btn:hover {
+  background: rgba(6, 182, 212, 0.2) !important;
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.2) !important;
+  transform: translateY(-1px) !important;
 }
 
 .nav-actions {
@@ -906,6 +936,177 @@ body.light-mode .hero-glass-card {
   background: rgba(6, 182, 212, 0.1);
   padding: 4px 10px;
   border-radius: 4px;
+}
+
+/* 8. Security Labs Section */
+.labs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .labs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.lab-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.lab-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.lab-badge {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-active {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #10b981;
+}
+
+.badge-secured {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: #3b82f6;
+}
+
+.badge-testing {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  color: #f59e0b;
+}
+
+.lab-icon {
+  font-size: 1.8rem;
+  height: 44px;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+body.light-mode .lab-icon {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.lab-card h3 {
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.lab-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.lab-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.lab-tech span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+body.light-mode .lab-tech span {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* Terminal GUI inside Lab Cards */
+.lab-terminal {
+  margin-top: auto;
+  width: 100%;
+  background: #050811;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .lab-terminal {
+  background: #0d131f;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.term-header {
+  display: flex;
+  align-items: center;
+  background: #0c1222;
+  padding: 8px 12px;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.light-mode .term-header {
+  background: #141c2c;
+}
+
+.term-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.term-dot:nth-child(1) { background-color: #ef4444; }
+.term-dot:nth-child(2) { background-color: #f59e0b; }
+.term-dot:nth-child(3) { background-color: #10b981; }
+
+.term-title {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-left: 6px;
+}
+
+.term-body {
+  padding: 12px 16px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  line-height: 1.4;
+}
+
+.term-prompt {
+  color: var(--color-accent);
+}
+
+.term-output {
+  color: var(--text-secondary);
 }
 
 /* 9. Contact Section */

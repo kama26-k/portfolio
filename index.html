@@ -49,6 +49,10 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#security-labs">Security Labs</a></li>
+      <li><a href="https://github.com/sakamalesh" target="_blank" class="nav-external">GitHub <span class="ext-icon">↗</span></a></li>
+      <li><a href="assets/Kamalesh_Resume.pdf" download class="btn btn-sm btn-outline nav-resume-btn">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-actions">
@@ -474,6 +478,132 @@
           </div>
           <p>Led a team of 5 members. Developed communication, critical thinking, and decision-making skills under competitive conditions.</p>
           <span class="achievement-tag">Leadership</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security Labs Section -->
+  <section id="security-labs">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <h2>Security Labs</h2>
+        <p class="section-subtitle">Hands-on cyber environments and virtual sandboxes built to simulate threats and test defenses.</p>
+      </div>
+
+      <div class="labs-grid">
+        <!-- Lab 1 -->
+        <div class="card-glass lab-card" data-reveal="scale" data-reveal-delay="1">
+          <div class="lab-header">
+            <span class="lab-badge badge-active">Active</span>
+            <span class="lab-icon">🌐</span>
+          </div>
+          <h3>Active Directory Penetration Testing Lab</h3>
+          <p>Local domain environment built to simulate real-world enterprise compromise and privilege escalation attacks.</p>
+          <div class="lab-tech">
+            <span>Windows Server 2022</span>
+            <span>Active Directory</span>
+            <span>Kali Linux</span>
+            <span>BloodHound</span>
+          </div>
+          <div class="lab-terminal">
+            <div class="term-header">
+              <span class="term-dot"></span>
+              <span class="term-dot"></span>
+              <span class="term-dot"></span>
+              <span class="term-title">terminal @ ad-domain-controller</span>
+            </div>
+            <div class="term-body">
+              <p class="term-prompt">$ Get-DomainUser -Identity krbtgt | Select-Object -Property SamAccountName</p>
+              <p class="term-output">SamAccountName: krbtgt [Kerberoastable - Active]</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lab 2 -->
+        <div class="card-glass lab-card" data-reveal="scale" data-reveal-delay="2">
+          <div class="lab-header">
+            <span class="lab-badge badge-secured">Secured</span>
+            <span class="lab-icon">🛡️</span>
+          </div>
+          <h3>SIEM & SOC Security Monitoring Lab</h3>
+          <p>Centralized log auditing dashboard for real-time host monitoring, brute-force alarms, and log analysis.</p>
+          <div class="lab-tech">
+            <span>Wazuh SIEM</span>
+            <span>Elasticsearch</span>
+            <span>Sysmon</span>
+            <span>Linux Auditing</span>
+          </div>
+          <div class="lab-terminal">
+            <div class="term-header">
+              <span class="term-dot"></span>
+              <span class="term-dot"></span>
+              <span class="term-dot"></span>
+              <span class="term-title">terminal @ soc-dashboard</span>
+            </div>
+            <div class="term-body">
+              <p class="term-prompt">$ wazuh-control status</p>
+              <p class="term-output">wazuh-modulesd is running...</p>
+              <p class="term-output">[ALERT] ssh: Brute Force Attempt Blocked on Host-01</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lab 3 -->
+        <div class="card-glass lab-card" data-reveal="scale" data-reveal-delay="3">
+          <div class="lab-header">
+            <span class="lab-badge badge-active">Active</span>
+            <span class="lab-icon">☁️</span>
+          </div>
+          <h3>AWS Security Configuration & Auditing</h3>
+          <p>Cloud hardening lab applying IAM role authorization limits, CloudTrail logging, and automatic compliance checks.</p>
+          <div class="lab-tech">
+            <span>AWS IAM</span>
+            <span>AWS CloudTrail</span>
+            <span>AWS Config</span>
+            <span>Prowler Audit</span>
+          </div>
+          <div class="lab-terminal">
+            <div class="term-header">
+              <span class="term-dot"></span>
+              <span class="term-dot"></span>
+              <span class="term-dot"></span>
+              <span class="term-title">terminal @ aws-cli</span>
+            </div>
+            <div class="term-body">
+              <p class="term-prompt">$ aws cloudtrail describe-trails --query "trailList[*].Name"</p>
+              <p class="term-output">[ "SEC-Compliance-Audit-Trail" ]</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lab 4 -->
+        <div class="card-glass lab-card" data-reveal="scale" data-reveal-delay="4">
+          <div class="lab-header">
+            <span class="lab-badge badge-testing">Testing</span>
+            <span class="lab-icon">🐳</span>
+          </div>
+          <h3>Docker Vulnerability Sandbox</h3>
+          <p>Containerized targets hosting deliberately vulnerable services for vulnerability scanner calibration.</p>
+          <div class="lab-tech">
+            <span>Docker</span>
+            <span>OWASP Juice Shop</span>
+            <span>Nessus Scanner</span>
+            <span>Metasploitable</span>
+          </div>
+          <div class="lab-terminal">
+            <div class="term-header">
+              <span class="term-dot"></span>
+              <span class="term-dot"></span>
+              <span class="term-dot"></span>
+              <span class="term-title">terminal @ sandbox</span>
+            </div>
+            <div class="term-body">
+              <p class="term-prompt">$ docker-compose ps</p>
+              <p class="term-output">juice-shop   Up 3000/tcp   [Vuln-Target]</p>
+              <p class="term-output">metasploit   Up 80/tcp     [Vuln-Target]</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
